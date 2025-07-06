@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 )
 
 func trySend(ch chan<- int , value int) bool {
@@ -32,9 +31,4 @@ func main(){
 	isSuccessfully := trySend(ch , 55)
 
 	fmt.Println("Is send successfully :", isSuccessfully)
-
-	var foo int
-	if runtime.selectnbrecv(&foo , ch){
-		fmt.Println("All is ok , result :" , foo)
-	}
 }
