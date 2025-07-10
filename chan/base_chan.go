@@ -13,7 +13,7 @@ func main(){
 	go func() {
 		ch <- 42
 	}()
-	// this forutin will be blocked forever , deadlock . 
+	// this gorutin will be blocked forever , deadlock . 
 	Chan have no buf and recvrs
 	*/
 
